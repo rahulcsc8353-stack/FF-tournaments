@@ -1813,13 +1813,26 @@ https:ffleague.rf.gd/`;
         }
 
         function handleContactUs() {
-            if (!currentUser) { alert("Please login to contact us."); return; }
-            const contactNumber = appSettings.supportContact || 'https://wa.link/dvd51g';
-            const userName = userProfile.displayName || "a user";
-            const message = `Hello Sir I Am ${userName} I need your help.`;
-            const whatsappUrl = `https://wa.me/${contactNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
+  if (!currentUser) {
+    alert("Please login to contact us.");
+    return;
+  }
+
+  // Country code ke saath number
+  const contactNumber = "919016784574";
+
+  const userName = userProfile?.displayName || "a user";
+  const message = `Hello Sir, I am ${userName}. I need help related to Free Fire tournament.`;
+
+  const whatsappUrl =
+    "https://wa.link/gofusp" +
+    contactNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.location.href = whatsappUrl;
+}
+
         
         async function loadMatchHistory() {
             if (!currentUser || !elements.matchHistoryModalInstance) return;
