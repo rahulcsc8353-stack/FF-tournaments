@@ -554,7 +554,7 @@
                     <div class="col"><a href="#" data-section="tournaments-section" class="home-nav-item"><div class="icon-wrapper"><i class="bi bi-controller"></i></div><span>My Matches</span></a></div>
                     <div class="col"><a href="#" data-section="wallet-section" class="home-nav-item"><div class="icon-wrapper"><i class="bi bi-wallet2"></i></div><span>My Wallet</span></a></div>
                     <div class="col"><a href="#" data-section="leaderboard-section" class="home-nav-item"><div class="icon-wrapper"><i class="bi bi-trophy"></i></div><span>Top Players</span></a></div>
-                    <div class="col"><a href="#" id="homeContactUsBtn" class="home-nav-item"><div class="icon-wrapper"><i class="bi bi-headset"></i></div><span>Contact Us</span></a></div>
+                    <div class="col"><a href="https://wa.link/7d3elp" id="homeContactUsBtn" class="home-nav-item"><div class="icon-wrapper"><i class="bi bi-headset"></i></div><span>Contact Us</span></a></div>
                 </div>
             </div>
 
@@ -1814,10 +1814,10 @@ https:ffleague.rf.gd/`;
 
         function handleContactUs() {
             if (!currentUser) { alert("Please login to contact us."); return; }
-            const contactNumber = appSettings.supportContact || '9389660753';
+            const contactNumber = appSettings.supportContact || '9016784574';
             const userName = userProfile.displayName || "a user";
             const message = `Hello Sir I Am ${userName} I need your help.`;
-            const whatsappUrl = `https://wa.me/${contactNumber}?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/9016784574${contactNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
         
