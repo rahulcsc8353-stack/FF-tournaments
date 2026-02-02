@@ -1814,10 +1814,10 @@ https:ffleague.rf.gd/`;
 
         function handleContactUs() {
             if (!currentUser) { alert("Please login to contact us."); return; }
-            const contactNumber = appSettings.supportContact || 'https://wa.link/';
+            const contactNumber = appSettings.supportContact || '919016784574';
             const userName = userProfile.displayName || "a user";
             const message = `Hello Sir I Am ${userName} I need your help.`;
-            const whatsappUrl = `${contactNumber}?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/${contactNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
         
