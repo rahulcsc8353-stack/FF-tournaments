@@ -1812,26 +1812,33 @@ https:ffleague.rf.gd/`;
             markNotificationsAsRead();
         }
 
-        function handleContactUs() {
+        <script>
+function handleContactUs() {
   if (!currentUser) {
     alert("Please login to contact us.");
     return;
   }
 
-  // Country code ke saath number
+  // WhatsApp number with country code (India)
   const contactNumber = "919016784574";
 
-  const userName = userProfile?.displayName || "a user";
+  const userName = (userProfile && userProfile.displayName) 
+    ? userProfile.displayName 
+    : "a user";
+
   const message = `Hello Sir, I am ${userName}. I need help related to Free Fire tournament.`;
 
   const whatsappUrl =
-    "https://wa.me/919016784574" +
+    "https://wa.me/" +
     contactNumber +
     "?text=" +
     encodeURIComponent(message);
 
+  // Redirect to WhatsApp
   window.location.href = whatsappUrl;
 }
+</script>
+
 
         
         async function loadMatchHistory() {
